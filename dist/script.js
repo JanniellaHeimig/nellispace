@@ -73,13 +73,15 @@ addEventListener("keydown", (event) => {
 });
 
 const contactButton = $("#contact-button");
-contactButton.addEventListener("click", async () => {
-  const status = $("span:last-child", contactButton);
-  try {
-    await navigator.clipboard.writeText(contactButton.dataset.email);
-    status.textContent = "Copied ✓";
-  } catch {
-    status.textContent = "Select address";
-  }
-  setTimeout(() => { status.textContent = "Copy address"; }, 2200);
-});
+if (contactButton) {
+  contactButton.addEventListener("click", async () => {
+    const status = $("span:last-child", contactButton);
+    try {
+      await navigator.clipboard.writeText(contactButton.dataset.email);
+      status.textContent = "Copied ✓";
+    } catch {
+      status.textContent = "Select address";
+    }
+    setTimeout(() => { status.textContent = "Copy address"; }, 2200);
+  });
+}

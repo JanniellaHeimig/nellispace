@@ -103,6 +103,57 @@ img { display: block; max-width: 100%; }
 .photo-h { grid-column: 1 / span 5; }
 .photo-i { grid-column: 7 / span 5; margin-top: 15vw; }
 
+.project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(4rem, 8vw, 9rem) clamp(1.2rem, 3vw, 3.5rem); }
+.project-card { display: block; min-width: 0; text-decoration: none; }
+.project-outdoor, .project-portrait { margin-top: clamp(5rem, 10vw, 11rem); }
+.project-image { position: relative; display: block; overflow: hidden; background: #cbc4b7; }
+.project-image::after { content: ""; position: absolute; inset: 0; border: 1px solid rgba(255,255,255,.18); pointer-events: none; }
+.project-image img { width: 100%; height: clamp(28rem, 55vw, 52rem); object-fit: cover; transition: transform .75s cubic-bezier(.2,.7,.2,1), filter .4s; }
+.project-street .project-image img { object-position: center 54%; }
+.project-outdoor .project-image img { object-position: center 48%; }
+.project-wedding .project-image img { object-position: center; }
+.project-portrait .project-image img { object-position: center; }
+.project-card:hover img, .project-card:focus-visible img { transform: scale(1.018); filter: saturate(1.06); }
+.project-caption { display: flex; justify-content: space-between; align-items: start; gap: 1rem; padding-top: .9rem; border-top: 1px solid var(--line); font: .62rem var(--mono); text-transform: uppercase; letter-spacing: .06em; }
+.project-caption > span:first-child { display: grid; gap: .35rem; }
+.project-caption strong { font: 400 clamp(2rem, 3.3vw, 3.6rem)/.9 var(--serif); letter-spacing: -.045em; text-transform: none; }
+.project-caption small { color: var(--muted); font: inherit; }
+
+.journal-page .site-header { position: absolute; }
+.journal-page .site-header nav { gap: clamp(1rem, 2vw, 2rem); }
+.journal-page .site-header nav a[aria-current="page"] { color: var(--red); }
+.journal-hero { min-height: 100svh; display: grid; grid-template-columns: 42% 58%; border-bottom: 1px solid var(--line); }
+.journal-hero-copy { display: flex; flex-direction: column; justify-content: flex-end; padding: 9rem var(--pad) 3rem; }
+.journal-kicker { margin: 0 0 auto; font: 600 .65rem var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+.journal-hero h1 { margin: 4rem 0 2rem; font: 400 clamp(4.4rem, 10vw, 10rem)/.78 var(--serif); letter-spacing: -.075em; }
+.journal-hero h1 em { display: block; color: var(--red); font-weight: 400; }
+.journal-hero-copy > p:last-child { max-width: 29rem; margin: 0; font: clamp(1.05rem, 1.5vw, 1.35rem)/1.45 var(--serif); }
+.journal-hero-image { min-width: 0; margin: 0; border-left: 1px solid var(--line); overflow: hidden; }
+.journal-hero-image img { width: 100%; height: 100svh; object-fit: cover; }
+.journal-hero-image figcaption { position: absolute; right: var(--pad); bottom: 1.4rem; color: #fff; font: .6rem var(--mono); text-transform: uppercase; text-shadow: 0 1px 12px rgba(0,0,0,.55); }
+.journal-hero-image { position: relative; }
+.journal-street .journal-hero-image img { object-position: center 52%; }
+.journal-outdoor .journal-hero-image img { object-position: center; }
+.journal-wedding .journal-hero-image img { object-position: center; }
+.journal-portrait .journal-hero-image img { object-position: center; }
+
+.journal-intro { display: grid; grid-template-columns: 1fr 3fr 1fr; gap: clamp(2rem, 6vw, 7rem); padding: clamp(6rem, 11vw, 12rem) var(--pad); border-bottom: 1px solid var(--line); }
+.journal-intro .eyebrow { align-self: start; }
+.journal-intro h2 { margin: 0; font: 400 clamp(2.4rem, 5vw, 5.5rem)/1 var(--serif); letter-spacing: -.05em; }
+.journal-intro p:last-child { align-self: end; margin: 0; font: .82rem/1.55 var(--sans); }
+.journal-gallery { padding: clamp(5rem, 9vw, 10rem) var(--pad) clamp(7rem, 12vw, 13rem); }
+.journal-grid { columns: 2; column-gap: clamp(1.2rem, 3vw, 3.5rem); }
+.journal-photo { width: 100%; display: inline-block; break-inside: avoid; margin: 0 0 clamp(3rem, 7vw, 7rem); padding: 0; border: 0; background: none; cursor: zoom-in; text-align: left; }
+.journal-photo img { width: 100%; height: auto; transition: transform .7s cubic-bezier(.2,.7,.2,1), filter .4s; }
+.journal-photo:hover img, .journal-photo:focus-visible img { transform: scale(1.012); filter: saturate(1.06); }
+.journal-photo .photo-frame { display: block; }
+.journal-photo .photo-caption { margin-top: .7rem; }
+.journal-note { max-width: 48rem; margin: 0 auto clamp(7rem, 12vw, 13rem); padding: 0 var(--pad); text-align: center; font: clamp(2rem, 4.5vw, 4.8rem)/1.02 var(--serif); letter-spacing: -.045em; }
+.journal-note em { color: var(--red); font-weight: 400; }
+.journal-next { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 2rem; padding: clamp(4rem, 8vw, 8rem) var(--pad); background: var(--blue); color: #171814; text-decoration: none; }
+.journal-next span { font: .65rem var(--mono); text-transform: uppercase; }
+.journal-next strong { font: 400 clamp(3rem, 8vw, 8rem)/.8 var(--serif); letter-spacing: -.065em; }
+
 .interlude { position: relative; min-height: 90svh; overflow: hidden; background: #111; color: #fff8eb; }
 .interlude img { width: 100%; height: 100svh; object-fit: cover; object-position: center 51%; filter: brightness(.72); }
 .interlude p { position: absolute; left: var(--pad); bottom: 3rem; max-width: 54rem; margin: 0; font: clamp(2rem, 5vw, 5rem)/1 var(--serif); letter-spacing: -.045em; }
@@ -169,6 +220,21 @@ footer a { text-decoration: none; }
   .photo-grid { display: block; }
   .photo-card { width: 100%; margin: 0 0 5rem; }
   .photo-b, .photo-d, .photo-e, .photo-i { margin-top: 0; }
+  .project-grid { display: block; }
+  .project-card, .project-outdoor, .project-portrait { margin: 0 0 5rem; }
+  .project-image img { height: 70svh; }
+  .journal-page .site-header nav { display: none; }
+  .journal-hero { display: flex; flex-direction: column; min-height: auto; padding-top: 4.4rem; }
+  .journal-hero-copy { min-height: 55svh; padding: 3rem var(--pad); }
+  .journal-hero h1 { font-size: 20vw; margin-block: auto 2rem; }
+  .journal-hero-image { height: 78svh; border-left: 0; border-top: 1px solid var(--line); }
+  .journal-hero-image img { height: 100%; }
+  .journal-intro { grid-template-columns: 1fr; gap: 2rem; }
+  .journal-intro h2 { font-size: 2.6rem; }
+  .journal-intro p:last-child { max-width: 19rem; }
+  .journal-grid { columns: 1; }
+  .journal-photo { margin-bottom: 4rem; }
+  .journal-next { grid-template-columns: 1fr; }
   .interlude, .interlude img { min-height: 80svh; height: 80svh; }
   .practice-row { grid-template-columns: .35fr 2fr auto; }
   .practice-detail { display: none; }
