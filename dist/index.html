@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Nelli Space — photography, moving image, code, and visual research." />
+    <meta name="theme-color" content="#e9e3d7" />
+    <title>Nelli Space — Visual Practice</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#photographs">Skip to photographs</a>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="progress" aria-hidden="true"><span></span></div>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Nelli Space, back to top">
+        <span class="brand-name">NELLI</span>
+        <span class="brand-index">/ SPACE</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#photographs">Photographs</a>
+        <a href="#practice">Practice</a>
+        <a href="#about">About</a>
+      </nav>
+      <button class="view-toggle" id="view-toggle" type="button" aria-pressed="false">Darkroom</button>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow" data-reveal>Photography · moving image · digital practice</p>
+          <h1 id="hero-title" data-reveal>
+            <span>NELLI</span>
+            <em>SPACE</em>
+          </h1>
+          <p class="hero-intro" data-reveal>
+            A visual notebook about places, light, movement and the small details that make a scene stay with you.
+          </p>
+          <div class="hero-meta" data-reveal>
+            <span>Based in Vienna</span>
+            <span>Working everywhere</span>
+          </div>
+        </div>
+        <figure class="hero-image" data-reveal>
+          <img src="./assets/photos/hong-kong-street.webp" alt="A Hong Kong street at dusk, crowded with minibuses and glowing signs" />
+          <figcaption><span>Night study</span><span>01 / 10</span></figcaption>
+        </figure>
+        <a class="scroll-cue" href="#photographs" aria-label="Scroll to photographs">↓</a>
+      </section>
+
+      <section class="statement" aria-label="Artistic statement">
+        <p class="statement-number" data-reveal>00—01</p>
+        <p class="statement-lead" data-reveal>
+          Drawn to the moment when a place becomes a feeling—<em>sun on stone, a face through glass, a street switching on for the night.</em>
+        </p>
+        <p class="statement-aside" data-reveal>
+          Images collected between arrival and departure. Some are quiet, some are loud. All begin with looking.
+        </p>
+      </section>
+
+      <section class="photographs" id="photographs" aria-labelledby="photographs-title">
+        <header class="section-header" data-reveal>
+          <div>
+            <p class="eyebrow">01 / Photographic journal</p>
+            <h2 id="photographs-title">Recent observations</h2>
+          </div>
+          <p>Travel notes · 2025</p>
+        </header>
+
+        <div class="photo-grid">
+          <button class="photo-card photo-a" type="button" data-photo data-reveal>
+            <span class="photo-frame">
+              <img src="./assets/photos/hong-kong-neon.webp" alt="Red neon signage and minibuses on a Hong Kong street at night" loading="lazy" />
+            </span>
+            <span class="photo-caption"><span>After dark</span><span>01</span></span>
+          </button>
+
+          <button class="photo-card photo-b" type="button" data-photo data-reveal>
+            <span class="photo-frame">
+              <img src="./assets/photos/athens-wires.webp" alt="Birds resting on wires above a city at dusk" loading="lazy" />
+            </span>
+            <span class="photo-caption"><span>Wires at dusk</span><span>02</span></span>
+          </button>
+
+          <button class="photo-card photo-c" type="button" data-photo data-reveal>
+            <span class="photo-frame">
+              <img src="./assets/photos/island-overlook.webp" alt="Three women standing above a blue island coastline" loading="lazy" />
+            </span>
+            <span class="photo-caption"><span>At the edge</span><span>03</span></span>
+          </button>
+
+          <button class="photo-card photo-d" type="button" data-photo data-reveal>
+            <span class="photo-frame">
+              <img src="./assets/photos/greek-lane.webp" alt="Three children walking through a sunlit white island lane" loading="lazy" />
+            </span>
+            <span class="photo-caption"><span>High summer</span><span>04</span></span>
+          </button>
+
+          <button class="photo-card photo-e" type="button" data-photo data-reveal>
+            <span class="photo-frame">
+              <img src="./assets/photos/shoreline-sunset.webp" alt="A coastal road and beach at sunset" loading="lazy" />
+            </span>
+            <span class="photo-caption"><span>Last light</span><span>05</span></span>
+          </button>
+
+          <button class="photo-card photo-f" type="button" data-photo data-reveal>
+            <span class="photo-frame">
+              <img src="./assets/photos/wooden-alley.webp" alt="A narrow wooden alley with a blue scooter and small utility vehicle" loading="lazy" />
+            </span>
+            <span class="photo-caption"><span>Passage</span><span>06</span></span>
+          </button>
+
+          <button class="photo-card photo-g" type="button" data-photo data-reveal>
+            <span class="photo-frame">
+              <img src="./assets/photos/car-journey.webp" alt="View from the back seat of a car descending toward a coastal town" loading="lazy" />
+            </span>
+            <span class="photo-caption"><span>En route</span><span>07</span></span>
+          </button>
+
+          <button class="photo-card photo-h" type="button" data-photo data-reveal>
+            <span class="photo-frame">
+              <img src="./assets/photos/driver-window.webp" alt="A driver seen through layered reflections in an old vehicle window" loading="lazy" />
+            </span>
+            <span class="photo-caption"><span>Through glass</span><span>08</span></span>
+          </button>
+
+          <button class="photo-card photo-i" type="button" data-photo data-reveal>
+            <span class="photo-frame">
+              <img src="./assets/photos/bonsai-interior.webp" alt="A small bonsai tree in a warmly lit interior" loading="lazy" />
+            </span>
+            <span class="photo-caption"><span>Interior study</span><span>09</span></span>
+          </button>
+        </div>
+      </section>
+
+      <section class="interlude" aria-label="Photograph interlude">
+        <img src="./assets/photos/hong-kong-street.webp" alt="A vertical view over Hong Kong traffic and neon lights at dusk" loading="lazy" />
+        <p data-reveal>“The city turns cinematic just before the light disappears.”</p>
+      </section>
+
+      <section class="practice" id="practice" aria-labelledby="practice-title">
+        <header class="section-header section-header-dark" data-reveal>
+          <div>
+            <p class="eyebrow">02 / Expanded practice</p>
+            <h2 id="practice-title">Beyond the still image</h2>
+          </div>
+          <p>Other rooms in the same house.</p>
+        </header>
+        <div class="practice-list">
+          <a href="#contact" class="practice-row" data-reveal>
+            <span class="practice-index">A</span>
+            <span class="practice-name">Moving image</span>
+            <span class="practice-detail">Films · visual essays · loops</span>
+            <span class="practice-arrow">↗</span>
+          </a>
+          <a href="#contact" class="practice-row" data-reveal>
+            <span class="practice-index">B</span>
+            <span class="practice-name">Code & experiments</span>
+            <span class="practice-detail">Interfaces · tools · small worlds</span>
+            <span class="practice-arrow">↗</span>
+          </a>
+          <a href="#contact" class="practice-row" data-reveal>
+            <span class="practice-index">C</span>
+            <span class="practice-name">Research</span>
+            <span class="practice-detail">Images · memory · place</span>
+            <span class="practice-arrow">↗</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="about" id="about" aria-labelledby="about-title">
+        <div class="about-image" data-reveal>
+          <img src="./assets/photos/car-journey.webp" alt="Friends in a car looking toward a coastal town" loading="lazy" />
+        </div>
+        <div class="about-copy" data-reveal>
+          <p class="eyebrow">03 / About</p>
+          <h2 id="about-title">An archive that can wander.</h2>
+          <p>
+            Nelli Space is a personal portfolio and an open notebook. It brings photography together with moving image, code and research—held by curiosity rather than one fixed format.
+          </p>
+          <p class="about-note">Currently based in Vienna.<br />Available for thoughtful collaborations and visual commissions.</p>
+        </div>
+      </section>
+
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <p class="eyebrow" data-reveal>04 / Contact</p>
+        <h2 id="contact-title" data-reveal>Have somewhere<br />to go?</h2>
+        <div class="contact-row" data-reveal>
+          <p>For collaborations, commissions, research conversations and interesting detours.</p>
+          <button id="contact-button" type="button" data-email="hello@nelli.space">
+            <span>hello@nelli.space</span><span>Copy address</span>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>© 2026 Nelli Space</span>
+      <span>Vienna / elsewhere</span>
+      <a href="#top">Back to top ↑</a>
+    </footer>
+
+    <dialog class="lightbox" id="lightbox" aria-labelledby="lightbox-caption">
+      <button class="lightbox-close" type="button" aria-label="Close photograph">×</button>
+      <button class="lightbox-nav lightbox-prev" type="button" aria-label="Previous photograph">←</button>
+      <figure>
+        <img id="lightbox-image" alt="" />
+        <figcaption id="lightbox-caption"><span></span><span></span></figcaption>
+      </figure>
+      <button class="lightbox-nav lightbox-next" type="button" aria-label="Next photograph">→</button>
+    </dialog>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
