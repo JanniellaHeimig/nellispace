@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="About Nelli — a Vienna-based visual maker working across photography, moving image, code, and research." />
+    <meta name="theme-color" content="#e9e3d7" />
+    <title>About Nelli — Nelli Space</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="about-page">
+    <a class="skip-link" href="#story">Skip to story</a>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="progress" aria-hidden="true"><span></span></div>
+
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="Nelli Space, back to home">
+        <span class="brand-name">NELLI</span>
+        <span class="brand-index">/ SPACE</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="./journal/street.html">Street</a>
+        <a href="./journal/outdoor.html">Outdoor</a>
+        <a href="./journal/wedding.html">Wedding</a>
+        <a href="./journal/portrait.html">Portrait</a>
+        <a href="./about.html" aria-current="page">About</a>
+      </nav>
+      <button class="view-toggle" id="view-toggle" type="button" aria-pressed="false">Darkroom</button>
+    </header>
+
+    <main id="top">
+      <section class="about-hero" aria-labelledby="about-page-title">
+        <div class="about-hero-copy">
+          <p class="eyebrow" data-reveal>About / Nelli</p>
+          <h1 id="about-page-title" data-reveal>A little<em>closer.</em></h1>
+          <p data-reveal>I’m Nelli, a visual maker based in Vienna. I work across photography, moving image, code and research—following whatever form helps an idea feel most alive.</p>
+        </div>
+        <figure class="about-portrait" data-reveal>
+          <img src="./assets/about/nelli-portrait.webp" alt="Black-and-white portrait of Nelli looking into the camera" />
+          <figcaption>Self / in frame</figcaption>
+        </figure>
+      </section>
+
+      <section class="about-story" id="story" aria-labelledby="about-story-title">
+        <p class="eyebrow" data-reveal>01 / How I look</p>
+        <h2 id="about-story-title" data-reveal>I collect the moments that sit <em>between places.</em></h2>
+        <div class="about-story-text" data-reveal>
+          <p>My practice begins with attention: the way light changes a street, how a person holds themselves for half a second, or how a landscape alters our sense of scale.</p>
+          <p>Nelli Space is where those observations meet. It is both a portfolio and an open notebook—a place for finished stories, visual experiments and ideas still finding their shape.</p>
+        </div>
+      </section>
+
+      <figure class="about-landscape" data-reveal>
+        <img src="./assets/about/nelli-mountains.webp" alt="Nelli standing in front of a dramatic mountain range beneath a blue sky" loading="lazy" />
+        <figcaption>Somewhere along the trail</figcaption>
+        <blockquote>“Curiosity is the thread—from a crowded street to a quiet mountain path.”</blockquote>
+      </figure>
+
+      <section class="about-details" aria-labelledby="about-details-title">
+        <h2 id="about-details-title" data-reveal>What I’m<br />drawn to.</h2>
+        <dl class="about-details-list" data-reveal>
+          <div class="about-detail">
+            <dt>Looking</dt>
+            <dd>Everyday gestures, natural light, movement, atmosphere and the details that make a place memorable.</dd>
+          </div>
+          <div class="about-detail">
+            <dt>Making</dt>
+            <dd>Photography, moving image, visual essays, interfaces and small digital experiments.</dd>
+          </div>
+          <div class="about-detail">
+            <dt>Thinking</dt>
+            <dd>Images, memory and place—and how different mediums can hold the same idea in different ways.</dd>
+          </div>
+          <div class="about-detail">
+            <dt>Now</dt>
+            <dd>Based in Vienna and open to thoughtful collaborations, visual commissions and interesting detours.</dd>
+          </div>
+        </dl>
+      </section>
+
+      <a class="about-cta" href="./index.html#contact" data-reveal>
+        <span>Have something in mind?</span>
+        <strong>Let’s talk →</strong>
+      </a>
+    </main>
+
+    <footer>
+      <span>© 2026 Nelli Space</span>
+      <span>Vienna / elsewhere</span>
+      <a href="#top">Back to top ↑</a>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -32,45 +32,47 @@ viewToggle.addEventListener("click", () => {
 
 const photoCards = $$('[data-photo]');
 const lightbox = $("#lightbox");
-const lightboxImage = $("#lightbox-image");
-const captionTitle = $("#lightbox-caption span:first-child");
-const captionIndex = $("#lightbox-caption span:last-child");
-let activePhoto = 0;
+if (lightbox && photoCards.length) {
+  const lightboxImage = $("#lightbox-image");
+  const captionTitle = $("#lightbox-caption span:first-child");
+  const captionIndex = $("#lightbox-caption span:last-child");
+  let activePhoto = 0;
 
-function renderPhoto(index) {
-  activePhoto = (index + photoCards.length) % photoCards.length;
-  const card = photoCards[activePhoto];
-  const image = $("img", card);
-  const [title, number] = $$(".photo-caption span", card).map((item) => item.textContent);
-  lightboxImage.src = image.src;
-  lightboxImage.alt = image.alt;
-  captionTitle.textContent = title;
-  captionIndex.textContent = `${number} / ${String(photoCards.length).padStart(2, "0")}`;
+  function renderPhoto(index) {
+    activePhoto = (index + photoCards.length) % photoCards.length;
+    const card = photoCards[activePhoto];
+    const image = $("img", card);
+    const [title, number] = $$(".photo-caption span", card).map((item) => item.textContent);
+    lightboxImage.src = image.src;
+    lightboxImage.alt = image.alt;
+    captionTitle.textContent = title;
+    captionIndex.textContent = `${number} / ${String(photoCards.length).padStart(2, "0")}`;
+  }
+
+  function openLightbox(index) {
+    renderPhoto(index);
+    lightbox.showModal();
+    document.body.classList.add("lightbox-open");
+  }
+
+  function closeLightbox() {
+    lightbox.close();
+    document.body.classList.remove("lightbox-open");
+  }
+
+  photoCards.forEach((card, index) => card.addEventListener("click", () => openLightbox(index)));
+  $(".lightbox-close").addEventListener("click", closeLightbox);
+  $(".lightbox-prev").addEventListener("click", () => renderPhoto(activePhoto - 1));
+  $(".lightbox-next").addEventListener("click", () => renderPhoto(activePhoto + 1));
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) closeLightbox();
+  });
+  addEventListener("keydown", (event) => {
+    if (!lightbox.open) return;
+    if (event.key === "ArrowLeft") renderPhoto(activePhoto - 1);
+    if (event.key === "ArrowRight") renderPhoto(activePhoto + 1);
+  });
 }
-
-function openLightbox(index) {
-  renderPhoto(index);
-  lightbox.showModal();
-  document.body.classList.add("lightbox-open");
-}
-
-function closeLightbox() {
-  lightbox.close();
-  document.body.classList.remove("lightbox-open");
-}
-
-photoCards.forEach((card, index) => card.addEventListener("click", () => openLightbox(index)));
-$(".lightbox-close").addEventListener("click", closeLightbox);
-$(".lightbox-prev").addEventListener("click", () => renderPhoto(activePhoto - 1));
-$(".lightbox-next").addEventListener("click", () => renderPhoto(activePhoto + 1));
-lightbox.addEventListener("click", (event) => {
-  if (event.target === lightbox) closeLightbox();
-});
-addEventListener("keydown", (event) => {
-  if (!lightbox.open) return;
-  if (event.key === "ArrowLeft") renderPhoto(activePhoto - 1);
-  if (event.key === "ArrowRight") renderPhoto(activePhoto + 1);
-});
 
 const contactButton = $("#contact-button");
 if (contactButton) {
