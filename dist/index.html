@@ -22,7 +22,9 @@
         <a href="./journal/street.html">Street</a>
         <a href="./journal/outdoor.html">Outdoor</a>
         <a href="./journal/wedding.html">Wedding</a>
+        <a href="./journal/band.html">Band</a>
         <a href="./journal/portrait.html">Portrait</a>
+        <a href="./about.html">About</a>
       </nav>
       <button class="view-toggle" id="view-toggle" type="button" aria-pressed="false">Darkroom</button>
     </header>
@@ -42,7 +44,8 @@
             <a href="./journal/street.html"><span>01</span>Street</a>
             <a href="./journal/outdoor.html"><span>02</span>Outdoor</a>
             <a href="./journal/wedding.html"><span>03</span>Wedding</a>
-            <a href="./journal/portrait.html"><span>04</span>Portrait</a>
+            <a href="./journal/band.html"><span>04</span>Band</a>
+            <a href="./journal/portrait.html"><span>05</span>Portrait</a>
           </nav>
           <div class="hero-meta" data-reveal>
             <span>Based in Vienna</span>
@@ -67,31 +70,45 @@
       </section>
 
       <section class="photographs" id="photographs" aria-labelledby="photographs-title">
-        <header class="section-header" data-reveal>
-          <div>
+        <div class="project-opening">
+          <header class="project-opening-copy" data-reveal>
             <p class="eyebrow">01 / Selected work</p>
-            <h2 id="photographs-title">Four ways of looking</h2>
-          </div>
-          <p>Street · outdoor · wedding · portrait</p>
-        </header>
+            <h2 id="photographs-title">Five ways<br /><em>of looking</em></h2>
+            <p>Places, people and passing moments—five journals held together by attention.</p>
+            <span>Street · outdoor · wedding · band · portrait</span>
+          </header>
 
-        <div class="project-grid">
           <a class="project-card project-street" href="./journal/street.html" data-reveal>
-            <span class="project-image"><img src="./assets/journal/china-hong-kong/hk-neon-overlook.webp" alt="Hong Kong minibuses and neon signs at dusk" loading="lazy" /></span>
+            <span class="project-street-stack">
+              <span class="project-image project-image-secondary" aria-hidden="true"><img src="./assets/journal/china-hong-kong/hk-cyclist.webp" alt="" loading="lazy" /></span>
+              <span class="project-image project-image-main"><img src="./assets/journal/china-hong-kong/hk-neon-overlook.webp" alt="Hong Kong minibuses and neon signs at dusk" loading="lazy" /></span>
+            </span>
             <span class="project-caption"><span><strong>Street</strong><small>China · Hong Kong · Greece</small></span><span>01 ↗</span></span>
           </a>
+
           <a class="project-card project-outdoor" href="./journal/outdoor.html" data-reveal>
             <span class="project-image"><img src="./assets/journal/slovenia/slovenia-red-hat.webp" alt="Hiker in a red hat approaching a mountain hut in Slovenia" loading="lazy" /></span>
             <span class="project-caption"><span><strong>Outdoor</strong><small>Slovenia · Greece</small></span><span>02 ↗</span></span>
           </a>
-          <a class="project-card project-wedding" href="./journal/wedding.html" data-reveal>
-            <span class="project-image"><img src="./assets/journal/wedding/wedding-dance-b.webp" alt="Newlyweds dancing beneath an ivy-covered stone arch" loading="lazy" /></span>
-            <span class="project-caption"><span><strong>Wedding</strong><small>Story · gesture · celebration</small></span><span>03 ↗</span></span>
-          </a>
-          <a class="project-card project-portrait" href="./journal/portrait.html" data-reveal>
-            <span class="project-image"><img src="./assets/journal/portrait/hannah-study-02.webp" alt="Experimental black-and-white portrait seen through translucent material" loading="lazy" /></span>
-            <span class="project-caption"><span><strong>Portrait</strong><small>Light · form · experiment</small></span><span>04 ↗</span></span>
-          </a>
+        </div>
+
+        <div class="project-featured">
+          <p class="project-featured-title" aria-hidden="true">Featured <em>stories</em></p>
+          <div class="project-featured-grid">
+            <a class="project-card project-wedding" href="./journal/wedding.html" data-reveal>
+              <span class="project-image"><img src="./assets/journal/wedding/wedding-dance-b.webp" alt="Newlyweds dancing beneath an ivy-covered stone arch" loading="lazy" /></span>
+              <span class="project-caption"><span><strong>Wedding</strong><small>Story · gesture · celebration</small></span><span>03 ↗</span></span>
+            </a>
+            <a class="project-card project-band" href="./journal/band.html" data-reveal>
+              <span class="project-image"><img src="./assets/journal/band/band-live-guitar.webp" alt="Guitarist performing on stage in a black-and-white long exposure" loading="lazy" /></span>
+              <span class="project-caption"><span><strong>Band</strong><small>Live · press · artist portrait</small></span><span>04 ↗</span></span>
+            </a>
+            <a class="project-card project-portrait" href="./journal/portrait.html" data-reveal>
+              <span class="project-image"><img src="./assets/journal/portrait/hannah-study-02.webp" alt="Experimental black-and-white portrait seen through translucent material" loading="lazy" /></span>
+              <span class="project-caption"><span><strong>Portrait</strong><small>Light · form · experiment</small></span><span>05 ↗</span></span>
+            </a>
+          </div>
+          <p class="project-explore">Explore the journals</p>
         </div>
       </section>
 
@@ -131,16 +148,26 @@
       </section>
 
       <section class="about" id="about" aria-labelledby="about-title">
-        <div class="about-image" data-reveal>
-          <img src="./assets/photos/car-journey.webp" alt="Friends in a car looking toward a coastal town" loading="lazy" />
+        <div class="about-home-images" data-reveal>
+          <a class="about-home-portrait" href="./about.html" aria-label="Read more about Nelli">
+            <img src="./assets/about/nelli-portrait.webp" alt="Black-and-white portrait of Nelli looking into the camera" loading="lazy" />
+          </a>
+          <figure class="about-home-landscape">
+            <img src="./assets/about/nelli-mountains.webp" alt="Nelli standing in front of a dramatic mountain range beneath a blue sky" loading="lazy" />
+            <figcaption>Somewhere along the trail</figcaption>
+          </figure>
         </div>
         <div class="about-copy" data-reveal>
           <p class="eyebrow">03 / About</p>
-          <h2 id="about-title">An archive that can wander.</h2>
+          <h2 id="about-title">A little<br /><em>closer.</em></h2>
           <p>
-            Nelli Space is a personal portfolio and an open notebook. It brings photography together with moving image, code and research—held by curiosity rather than one fixed format.
+            I’m Nelli, a visual maker based in Vienna. I work across photography, moving image, code and research—following whatever form helps an idea feel most alive.
+          </p>
+          <p class="about-secondary">
+            My practice begins with attention: the way light changes a street, how a person holds themselves for half a second, or how a landscape alters our sense of scale. Nelli Space is where those observations meet—part portfolio, part open notebook.
           </p>
           <p class="about-note">Currently based in Vienna.<br />Available for thoughtful collaborations and visual commissions.</p>
+          <a class="about-link" href="./about.html">Read the full story <span>↗</span></a>
         </div>
       </section>
 
