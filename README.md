@@ -1,6 +1,6 @@
 # Nelli Space
 
-A photo-led personal portfolio for photography, moving image, code, and research. The selected work is organized into four editorial series: Street, Outdoor, Wedding, and Portrait.
+A photo-led personal portfolio for photography, moving image, code, and research. The selected work is organized into five editorial series: Street, Outdoor, Wedding, Band, and Portrait.
 
 ## Local preview
 

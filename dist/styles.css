@@ -112,6 +112,7 @@ img { display: block; max-width: 100%; }
 .project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(4rem, 8vw, 9rem) clamp(1.2rem, 3vw, 3.5rem); }
 .project-card { display: block; min-width: 0; text-decoration: none; }
 .project-outdoor, .project-portrait { margin-top: clamp(5rem, 10vw, 11rem); }
+.project-band { grid-column: 1 / -1; margin-top: clamp(2rem, 5vw, 5rem); }
 .project-image { position: relative; display: block; overflow: hidden; background: #cbc4b7; }
 .project-image::after { content: ""; position: absolute; inset: 0; border: 1px solid rgba(255,255,255,.18); pointer-events: none; }
 .project-image img { width: 100%; height: clamp(28rem, 55vw, 52rem); object-fit: cover; transition: transform .75s cubic-bezier(.2,.7,.2,1), filter .4s; }
@@ -119,6 +120,8 @@ img { display: block; max-width: 100%; }
 .project-outdoor .project-image img { object-position: center 48%; }
 .project-wedding .project-image img { object-position: center; }
 .project-portrait .project-image img { object-position: center; }
+.project-band .project-image img { height: clamp(30rem, 63vw, 62rem); object-position: center 50%; filter: grayscale(1); }
+.project-band:hover .project-image img, .project-band:focus-visible .project-image img { filter: grayscale(1) contrast(1.04); }
 .project-card:hover img, .project-card:focus-visible img { transform: scale(1.018); filter: saturate(1.06); }
 .project-caption { display: flex; justify-content: space-between; align-items: start; gap: 1rem; padding-top: .9rem; border-top: 1px solid var(--line); font: .62rem var(--mono); text-transform: uppercase; letter-spacing: .06em; }
 .project-caption > span:first-child { display: grid; gap: .35rem; }
@@ -142,6 +145,7 @@ img { display: block; max-width: 100%; }
 .journal-outdoor .journal-hero-image img { object-position: center; }
 .journal-wedding .journal-hero-image img { object-position: center; }
 .journal-portrait .journal-hero-image img { object-position: center; }
+.journal-band .journal-hero-image img { object-position: center; filter: grayscale(1) contrast(1.05); }
 
 .journal-intro { display: grid; grid-template-columns: 1fr 3fr 1fr; gap: clamp(2rem, 6vw, 7rem); padding: clamp(6rem, 11vw, 12rem) var(--pad); border-bottom: 1px solid var(--line); }
 .journal-intro .eyebrow { align-self: start; }
